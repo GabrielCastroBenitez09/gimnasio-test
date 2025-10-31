@@ -1,106 +1,120 @@
-# Título del Proyecto
+# 🏋️‍♀️ Sistema de Gestión para Gimnasio — Proyecto Programación II
 
-_Acá va un párrafo que describa lo que es el proyecto_
+Este repositorio contiene el desarrollo de un sistema para la administración de un gimnasio, construido como proyecto académico para el curso **Programación II — Pregrado en Ciencia de Datos**.
 
-## Comenzando 🚀
-
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
-
-Mira **Deployment** para conocer como desplegar el proyecto.
-
-
-### Pre-requisitos 📋
-
-_Que cosas necesitas para instalar el software y como instalarlas_
-
-```
-Da un ejemplo
-```
-
-### Instalación 🔧
-
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
-
-_Dí cómo será ese paso_
-
-```
-Da un ejemplo
-```
-
-_Y repite_
-
-```
-hasta finalizar
-```
-
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
-
-## Ejecutando las pruebas ⚙️
-
-_Explica como ejecutar las pruebas automatizadas para este sistema_
-
-### Analice las pruebas end-to-end 🔩
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-### Y las pruebas de estilo de codificación ⌨️
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-## Despliegue 📦
-
-_Agrega notas adicionales sobre como hacer deploy_
-
-## Construido con 🛠️
-
-_Menciona las herramientas que utilizaste para crear tu proyecto_
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
-
-## Contribuyendo 🖇️
-
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
-## Wiki 📖
-
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
-
-## Versionado 📌
-
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
-
-## Autores ✒️
-
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
-
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
-
-## Expresiones de Gratitud 🎁
-
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* Dona con cripto a esta dirección: `0xf253fc233333078436d111175e5a76a649890000`
-* etc.
-
-
+El objetivo del proyecto es aplicar principios de **Programación Orientada a Objetos (POO)**, manejo de archivos para **persistencia de datos**, desarrollo de una **interfaz de línea de comandos (CLI)** y **pruebas automatizadas**, siguiendo buenas prácticas de diseño de software.
 
 ---
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
+
+## 🚀 Funcionalidades
+
+### 👥 Gestión de usuarios
+- Registro y administración de clientes y empleados  
+- Validación de datos  
+- Manejo de roles  
+
+### 📅 Clases y reservas
+- Creación y asignación de clases  
+- Validación de cupos  
+- Cancelación de reservas  
+- Historial de actividades  
+
+### 🏋️‍♂️ Equipos del gimnasio
+- Registro y control de máquinas  
+- Estado y mantenimiento  
+
+### 🧾 Pagos y membresías _(si el equipo lo incluye)_
+- Registro de pagos  
+- Gestión de membresías activas y vencidas  
+
+### 💾 Persistencia
+- Almacenamiento local de datos (JSON / CSV / Pickle según implementación)
+
+### 🛠️ CLI
+- Menús interactivos para las operaciones principales  
+
+### ✅ Pruebas
+- Pruebas unitarias con `unittest` o `pytest`
+
+---
+
+## 🧱 Arquitectura del proyecto
+
+📦 gimnasio-sistema  
+ ┣ 📂 src  
+ │ ┣ 📜 usuario.py  
+ │ ┣ 📜 cliente.py  
+ │ ┣ 📜 empleado.py  
+ │ ┣ 📜 maquina.py  
+ │ ┣ 📜 gimnasio.py  
+ │ ┗ 📜 main.py              # CLI principal  
+ ┣ 📂 data  
+ │ ┗ 📜 *.json / *.csv       # Persistencia  
+ ┣ 📂 tests  
+ │ ┗ 📜 test_*.py  
+ ┣ 📜 README.md  
+ ┣ 📜 requirements.txt  
+ ┗ 📜 .gitignore  
+
+---
+
+## 🧪 Ejecución del programa
+
+### ✅ Requisitos
+- Python 3.10 o superior  
+- Pip  
+
+### ▶️ Instalar dependencias
+
+`pip install -r requirements.txt`
+
+### ▶️ Ejecutar el sistema
+
+`python src/main.py`
+
+### ✅ Ejecutar pruebas
+
+`pytest`
+
+---
+
+## 🧠 Conceptos aplicados
+
+- Programación Orientada a Objetos  
+  - Clases, herencia, composición  
+  - Encapsulamiento  
+  - Métodos mágicos (`__str__`, `__repr__`, etc.)  
+- Manejo de archivos para persistencia  
+- Control de errores y validaciones  
+- CLI con estructuras de control  
+- Testing automatizado  
+- Buenas prácticas: pep8, modularidad, docstrings  
+
+---
+
+## 🌟 Extensiones posibles (opcionales)
+
+- Lista de espera automática para clases llenas  
+- Reportes por rango de fechas o entrenador  
+- Exportación de reportes a CSV  
+- Decorador para logging de acciones  
+- Uso de context manager (`__enter__`, `__exit__`)
+
+---
+
+## 👨‍💻 Equipo de desarrollo
+
+| Integrante | Rol | Contacto |
+|-----------|-----|---------|
+| Nombre 1 | Backend / Persistencia | @github |
+| Nombre 2 | CLI / Control de flujo | @github |
+| Nombre 3 | Testing / QA | @github |
+| Nombre 4 | Documentación / UX CLI | @github |
+
+> **Profesor:** Camilo Andrés De la Cruz Arboleda  
+
+---
+
+## 📜 Licencia
+
+Proyecto académico — uso educativo.
